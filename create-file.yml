@@ -1,0 +1,8 @@
+---
+# same config file
+- hosts: hosts
+  tasks:
+  - name : Ansible to create file 
+    file: 
+      path: /tmp/my.txt
+      state: touch
