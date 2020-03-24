@@ -1,0 +1,9 @@
+---
+# same config file
+- hosts: hosts
+  tasks:
+    - name: Add the user 'rajender' for testing
+      user:
+        name: rajender
+        comment: Testing Phase
+        state: absent
