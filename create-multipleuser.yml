@@ -1,0 +1,18 @@
+---
+# same config file
+- hosts: hosts
+  tasks:
+    - name: Add the user 'rajender' for testing
+      user:
+        name: rajender
+        comment: Testing Phase
+        state: present
+
+    - name: add several users
+      user:
+        name: "{{ item }}"
+        state: present
+        groups: "wheeel"
+      loop:
+         - testuser1
+         - testuser2
