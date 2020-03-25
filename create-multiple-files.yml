@@ -1,0 +1,11 @@
+---
+# same config file
+- hosts: hosts
+  tasks:
+  - name : Ansible to create multiple files
+    file: 
+      path: "{{ item.location }}"
+      state: touch
+    with_items:
+       - { location: 'task5_file3.txt',mode: '0566'}
+       - { loaction: 'task5_file3.txt',mode: '0566'}

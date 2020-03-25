@@ -1,0 +1,11 @@
+---
+# same config file
+- hosts: hosts
+  tasks:
+  - name : Ansible to create files with content
+    copy: 
+      dest: "/home/preddy/my.txt"
+      content:
+        Purushotham reddy
+        Hyderabad
+        Devops Architech
